@@ -16,8 +16,9 @@ namespace RestApis.Controllers
     [ApiController]
     public class CatController : ControllerBase
     {
+
         // GET: api/<CatController>
-        [HttpGet]
+        [HttpGet("flipimage")]
         public IActionResult Get()
         {
             // Get Cat Image from APIEndpoint
@@ -35,30 +36,5 @@ namespace RestApis.Controllers
             return File(b, "image/jpeg");
         }
 
-        // GET api/<CatController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CatController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-            
-        }
-
-        // PUT api/<CatController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CatController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
